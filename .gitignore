@@ -1,0 +1,5 @@
+.DS_Store
+
+# The source deck is ~94 MB — too large to keep in Git history.
+# Everything it contains has been carried into the site itself.
+slides/
