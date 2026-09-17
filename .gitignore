@@ -1,5 +1,71 @@
-.DS_Store
-
-# The source deck is ~94 MB — too large to keep in Git history.
-# Everything it contains has been carried into the site itself.
+# ─── Source assets ────────────────────────────────────────────────
+# The pitch deck is ~94 MB — close to GitHub's 100 MB hard limit, and it
+# would bloat history permanently. Everything in it is already in the site.
+# Keep it wherever the team stores the deck (Drive, Dropbox, or Git LFS).
 slides/
+
+# Other large originals that belong outside the repo. Only the exported,
+# web-sized files in assets/img/ should ever be committed.
+*.psd
+*.ai
+*.sketch
+*.fig
+*.pdf
+*.mov
+*.mp4
+
+# ─── OS cruft ─────────────────────────────────────────────────────
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# ─── Editors ──────────────────────────────────────────────────────
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+.idea/
+*.sublime-workspace
+*.swp
+*.swo
+*~
+.history/
+
+# ─── Local servers, logs, scratch ─────────────────────────────────
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.cache/
+.tmp/
+tmp/
+_*.html
+
+# ─── Secrets & environment ────────────────────────────────────────
+# Never commit these — a static site is fully public, including its repo.
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# ─── Tooling, if any is added later ───────────────────────────────
+# This site is plain HTML/CSS/JS with no build step. These entries just
+# keep things clean if a formatter, bundler or link-checker shows up.
+node_modules/
+dist/
+build/
+.parcel-cache/
+.sass-cache/
+*.css.map
+*.js.map
+
+# ─── GitHub Pages / Jekyll ────────────────────────────────────────
+# .nojekyll is committed on purpose; these are Jekyll's own artifacts.
+_site/
+.jekyll-cache/
+.jekyll-metadata
